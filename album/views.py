@@ -7,16 +7,7 @@ def photo(request):
 
 def image_of_day(request):
     date = dt.date.today()
-
-    day = convert_dates(date)
-    html = f'''
-        <html>
-            <body>
-                <h1> Image for {date.day}-{date.month}-{date.year}</h1>
-            </body>
-        </html>
-            '''
-    return HttpResponse(html)
+    return render(request, 'images/today-image.html', {"date": date,})
 
 def convert_dates(dates):
     day_number = dt.date.weekday(dates)
@@ -32,13 +23,9 @@ def past_days_image(request,past_date):
 
     except ValueError:
         raise Http404()
+        assert False
 
-    day = convert_dates(date)
-    html = f'''
-        <html>
-            <body>
-                <h1>News for {day} {date.day}-{date.month}-{date.year}</h1>
-            </body>
-        </html>
-            '''
-    return HttpResponse(html)
+    if date == dt.date.today():
+        return redirect(image_of_day)
+
+    return render(request, 'images/past-image.html', {"date": date})
