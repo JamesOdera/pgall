@@ -25,3 +25,14 @@ class Image(models.Model):
     def save_image(self):
         self.save()
 
+    def delete_image(self):
+        self.delete()
+
+    @classmethod
+    def todays_image(cls):
+        today = dt.date.today()
+        image = cls.objects.filter(pub_date__date=today)
+        return image
+
+    
+
