@@ -6,12 +6,18 @@ gallery app that allow users view different photos
 ## Decription
 this app allows viewers to veiw images and based on the category search for them. it's still in the development process as it will be updated with more features.
 
+## Setup method
+
+- Load the app on a web browser
+- After it load click on an image to vie the detail
+- You can also search depending on category like flower
+
 ## Technologies 
 -python django 
 -html css
 -bootstrap
 
-![alt text](http://url/to/untitled 8.jpg)
+[![codebeat badge](https://codebeat.co/badges/43ff40f6-c0ae-4863-b3ce-adc4b26b1e66)](https://codebeat.co/projects/github-com-jamesodera-pgall-master)
 
 ## MIT License
 
