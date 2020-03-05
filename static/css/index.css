@@ -1,6 +1,7 @@
 
 body {margin:0;
-background-color: gray;
+background-image: url("https://images.unsplash.com/photo-1536183922588-166604504d5e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+background-size: cover;
 }
 
 
@@ -15,7 +16,7 @@ background-color: gray;
 .navbar a {
   float: left;
   display: block;
-  color: #000000;
+  color: #ff0000;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
