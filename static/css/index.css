@@ -1,4 +1,32 @@
 
+body {margin:0;
+background-color: gray;
+}
+
+
+.navbar {
+  overflow: hidden;
+  background-color: transparent;
+  /* position: fixed; */
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
 h1
 {
   color: red;
