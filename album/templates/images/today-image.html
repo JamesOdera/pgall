@@ -12,30 +12,41 @@
 <body>
 {% block content %}
 {{block.super}}
-<div class="blog">
-    <h1 style="font-size: 50px; color: aliceblue; "> Welcome to the Gallery </h1>
-
-    <div class="box">
-        <h1> GALLERY</h1>
-    </div>
-    </div>
-{% for image_item in images %}
-
-<div class="container">
-<div class="container-fluid">
-
-<div class="row">
-  <div class="col-md-4">
-      <h2 class="text-center"> {{ image_item.name }} </h2>
-      <img src="{{image_item.image.url}}" class="img-responsive" alt="Image">
-      <h2> {{ image_item.category }} </h2>
-        <h2> {{ image_item.location }} </h2>
-    </div>
-</div>
-</div>
-</div>
-
-{% endfor %}
+    <div class="container-fluid display">
+        <div class="row">
+            {% for image in images %}
+            <div class="col-sm-8 col-md-6 col-lg-3 ">
+                <img src="{{image.image.url}}" class="img-fluid img-thumbnail img-responsive" alt="image" height="300px"
+                    width="600px" padding-top="3px" data-toggle="modal" data-target="#{{image.title}}{{image.id}}">
+            </div>
+            <div class="modal fade" id="{{image.title}}{{image.id}}" tabindex="-1" role="dialog"
+                aria-labelledby="examplemodal" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title text-center" id="modaltitle">{{image.title}}</h4><br>
+                        </div>
+                        <div class="modal-body text-center">
+                            <img src="{{image.image.url}}" alt="" width="100%" height="100%">
+                        </div>
+                        <div class="modal-footer">
+                            <p>{{image.description}}</p>
+                            <div class="form-group row">
+                                <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 padding-1">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary btn_toggle"
+                                            onclick="copylink(`{{image.image.url}}`)">Copy Image Link</button>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-sm btn-outline-info"
+                                    data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
 {% endblock %}
 </body>
 </html>
