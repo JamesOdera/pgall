@@ -11,7 +11,7 @@ this app allows viewers to veiw images and based on the category search for them
 -html css
 -bootstrap
 
-![alt text](http://url/to/img.png)
+![alt text](http://url/to/untitled 8.jpg)
 
 ## MIT License
 
