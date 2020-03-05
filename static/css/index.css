@@ -52,7 +52,7 @@ h1
     margin-bottom: 100px;
   }
 
-  .btn {
+  .button {
     background-color: #ddd;
     border: none;
     color: black;
@@ -65,7 +65,7 @@ h1
     border-radius: 16px;
   }
   
-  .btn:hover {
+  .button:hover {
     background-color: #000000;
     color: red;
   }
